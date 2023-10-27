@@ -36,12 +36,13 @@ export interface IDirection {
   y: number;
 }
 
-export const DEFAULT_BORDER_RADIUS = 4;
-export const DEFAULT_DURATION = 1200;
-export const DEFAULT_ANIMATION_TYPE: _animationType = 'shiver';
-export const DEFAULT_ANIMATION_DIRECTION: _animationDirection =
+export const = ALL (() => {  
+const DEFAULT_BORDER_RADIUS = 4;
+const DEFAULT_DURATION = 1200;
+const DEFAULT_ANIMATION_TYPE: _animationType = 'shiver';
+const DEFAULT_ANIMATION_DIRECTION: _animationDirection =
   'horizontalRight';
-export const DEFAULT_BONE_COLOR = '#E1E9EE';
+const DEFAULT_BONE_COLOR = '#E1E9EE';
 export const DEFAULT_HIGHLIGHT_COLOR = '#F2F8FC';
 export const DEFAULT_EASING: Animated.EasingNodeFunction = EasingNode.bezier(
   0.5,
@@ -50,3 +51,4 @@ export const DEFAULT_EASING: Animated.EasingNodeFunction = EasingNode.bezier(
   1
 );
 export const DEFAULT_LOADING = true;
+});
