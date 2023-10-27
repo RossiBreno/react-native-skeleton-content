@@ -8,17 +8,7 @@ import {
   useValue
 } from 'react-native-redash/lib/module/v1';
 import {
-  ICustomViewStyle,
-  DEFAULT_ANIMATION_DIRECTION,
-  DEFAULT_ANIMATION_TYPE,
-  DEFAULT_BONE_COLOR,
-  DEFAULT_BORDER_RADIUS,
-  DEFAULT_EASING,
-  DEFAULT_DURATION,
-  DEFAULT_HIGHLIGHT_COLOR,
-  DEFAULT_LOADING,
-  ISkeletonContentProps,
-  IDirection
+  ALL
 } from './Constants';
 
 const { useCode, set, cond, eq } = Animated;
@@ -52,15 +42,15 @@ const useLayout = () => {
 };
 
 const SkeletonContent: React.FunctionComponent<ISkeletonContentProps> = ({
-  containerStyle = styles.container,
-  easing = DEFAULT_EASING,
-  duration = DEFAULT_DURATION,
+  containerStyle = ALL.styles.container,
+  easing = ALL.DEFAULT_EASING,
+  duration = ALL.DEFAULT_DURATION,
   layout = [],
-  animationType = DEFAULT_ANIMATION_TYPE,
-  animationDirection = DEFAULT_ANIMATION_DIRECTION,
-  isLoading = DEFAULT_LOADING,
-  boneColor = DEFAULT_BONE_COLOR,
-  highlightColor = DEFAULT_HIGHLIGHT_COLOR,
+  animationType = ALL.DEFAULT_ANIMATION_TYPE,
+  animationDirection = ALL.DEFAULT_ANIMATION_DIRECTION,
+  isLoading = ALL.DEFAULT_LOADING,
+  boneColor = ALL.DEFAULT_BONE_COLOR,
+  highlightColor = ALL.DEFAULT_HIGHLIGHT_COLOR,
   children
 }) => {
   const animationValue = useValue(0);
